@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif; 
+}
+
+/* Style the header */
+.header {
+    display: flex;
+  background-color: white;
+  padding: 30px;
+  text-align: center;
+  font-size: 14px;
+  height: 15em;
+}
+
+.header .sideL {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: start;
+}
+
+.header .sideR {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: end;
+}
+
+/* Container for flexboxes */
+.row {
+  display: -webkit-flex;
+  display: flex;
+  background-color: white;
+  height: 45em;
+}
+
+/* Create three unequal columns that sits next to each other */
+.column {
+  padding: 10px;
+ /* Should be removed. Only for demonstration */
+}
+
+/* Left and right column */
+.column.side {
+   -webkit-flex: 1;
+   -ms-flex: 1;
+   flex: 1;
+}
+
+/* Middle column */
+.column.middle {
+    display: flex;
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+  align-items: center;
+  justify-content:top;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+#searchBar {
+    width: 35em;
+    height: 3em;
+    padding: 2em 2em 2em 2em;
+}
+
+</style>
+</head>
+<body>
+<div class="header">
+    <div class="column sideL">
+        <a id="hAbout" href="">About</a>
+        <a id="hStore" href="">Store</a>
+    </div>
+    <div class="column middle"></div>
+    <div class="column sideR">
+        <a id="hGmail" href="">Gmail</a>
+            <a id="hImages" href="">Images</a>
+            <a id="hSymbol" href="">copy image</a>
+            <button id="hSignIn" type="button" onclick="alert('sign in')">Sign in</button>
+    </div>
+</div>
+
+<div class="row">
+  <div class="column middle">
+    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google title">
+    <form>
+        <label for='searchBar'></label>
+        <input type="text" id="searchBar" name="searchBar">
+    </form>
+    <div id='searchButton'>
+        <button type="button" onclick="alert('search for me')">Google Search</button>
+        <button type="button" onclick="alert('I\'m feeling lucky')">I'm feeling lucky</button>
+    </div>
+    </div>
+</div>
+<div class="footer">
+  <p>Footer</p>
+</div>
+
+<div class="footer">
+    <p>Footer1</p>
+  </div>
+
+  <div class="footer">
+    <p>Footer2</p>
+  </div>
+
+</body>
+</html>
