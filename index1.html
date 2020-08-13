@@ -1,88 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>CSS Template</title>
+<title>Google Template</title>
 <meta charset="utf-8">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif; 
-}
-
-/* Style the header */
-.header {
-    display: flex;
-  background-color: white;
-  padding: 30px;
-  text-align: center;
-  font-size: 14px;
-  height: 15em;
-}
-
-.header .sideL {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    text-align: start;
-}
-
-.header .sideR {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    text-align: end;
-}
-
-/* Container for flexboxes */
-.row {
-  display: -webkit-flex;
-  display: flex;
-  background-color: white;
-  height: 45em;
-}
-
-/* Create three unequal columns that sits next to each other */
-.column {
-  padding: 10px;
- /* Should be removed. Only for demonstration */
-}
-
-/* Left and right column */
-.column.side {
-   -webkit-flex: 1;
-   -ms-flex: 1;
-   flex: 1;
-}
-
-/* Middle column */
-.column.middle {
-    display: flex;
-  -webkit-flex: 2;
-  -ms-flex: 2;
-  flex: 2;
-  align-items: center;
-  justify-content:top;
-  flex-direction: column;
-  width: 100%;
-}
-
-/* Style the footer */
-.footer {
-  background-color: #f1f1f1;
-  padding: 10px;
-  text-align: center;
-}
-
-#searchBar {
-    width: 35em;
-    height: 3em;
-    padding: 2em 2em 2em 2em;
-}
-
-</style>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
 <body>
 <div class="header">
@@ -113,15 +34,32 @@ body {
     </div>
 </div>
 <div class="footer">
-  <p>Footer</p>
+  <div class="column sideL">
+    A privacy reminder from Google
+    </div>
+    <div class="column middle"></div>
+    <div class="column sideR">
+      <a id="fRml" href="">REMIND ME LATER</a>
+      <button id="fRenow" type="button" onclick="alert('review now')">REVIEW NOW</button>      
+    </div>
 </div>
 
 <div class="footer">
-    <p>Footer1</p>
+    <p>United Kingdom</p>
   </div>
 
   <div class="footer">
-    <p>Footer2</p>
+    <div class="column sideL">
+      <a href="">Advertising</a>
+      <a href="">Business</a>
+      <a href="">How Search works</a>
+    </div>
+    <div class="column middle"></div>
+    <div class="column sideL">
+      <a href="">Privacy</a>
+      <a href="">Terms</a>
+      <a href="">Settings</a>
+    </div>
   </div>
 
 </body>

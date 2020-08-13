@@ -3,27 +3,50 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif; 
 }
 
 /* Style the header */
 .header {
-  background-color: #f1f1f1;
-  padding: 30px;
+  display: flex;
+  background-color: white;
+  padding: 20px 20px 20px 20px;
   text-align: center;
-  font-size: 35px;
+  font-size: 14px;
+  height: 15em;
+}
+
+.header .sideL {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: start;
+}
+
+.header a {
+  padding: 2em 1em 2em 1em;
+  
+}
+
+.header .sideR {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: end;
 }
 
 /* Container for flexboxes */
 .row {
   display: -webkit-flex;
   display: flex;
+  background-color: white;
+  height: 45em;
 }
 
 /* Create three unequal columns that sits next to each other */
 .column {
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+ /* Should be removed. Only for demonstration */
 }
 
 /* Left and right column */
@@ -35,22 +58,49 @@ body {
 
 /* Middle column */
 .column.middle {
+    display: flex;
   -webkit-flex: 2;
   -ms-flex: 2;
   flex: 2;
+  align-items: center;
+  justify-content:top;
+  flex-direction: column;
+  width: 100%;
 }
 
 /* Style the footer */
 .footer {
+  display: flex;
   background-color: #f1f1f1;
-  padding: 10px;
+  padding: 20px 20px 0px 20px;
   text-align: center;
 }
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
-  .row {
-    -webkit-flex-direction: column;
-    flex-direction: column;
-  }
+.column.middle #searchBar {
+    width: 35em;
+    height: 3em;
+    padding: 2em 2em 2em 2em;
 }
+
+.column.middle #searchButton button {
+  padding: 2em 2em 2em 2em;
+  margin: 2em 2em 2em 2em;
+  height: 1.6em;
+  width: 10em;
+  border: none;
+  text-align: center;
+}
+
+.footer button {
+  background-color: #0394fc;
+  color: white;
+}
+
+.header button {
+  background-color: #0394fc;
+  color: white;
+}
+
+.footer a {
+    padding: 2em 1em 2em 1em;
+  }
